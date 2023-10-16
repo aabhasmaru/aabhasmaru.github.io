@@ -10,26 +10,26 @@ import { Menu } from '@components';
 import { IconLogo, IconHex } from '@components/icons';
 
 const StyledHeader = styled.header`
-  ${({ theme }) => theme.mixins.flexBetween};
-  position: fixed;
-  top: 0;
-  z-index: 11;
-  padding: 0px 50px;
-  width: 100%;
-  height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
-  filter: none !important;
-  pointer-events: auto !important;
-  user-select: auto !important;
-  backdrop-filter: blur(10px);
-  transition: var(--transition);
+/* Styles for the vertical header */
+display: flex;
+flex-direction: column; /* Arrange the children in a vertical column */
+align-items: center; /* Center the children horizontally */
+justify-content: flex-start; /* Start the children at the top */
+position: fixed;
+top: 0;
+left: 0;
+z-index: 12;
+width: var(--nav-width); /* Set the desired width of the header */
+height: 100vh;
+padding: 50px 0; /* Adjust the padding as needed */
+background-color: rgba(10, 25, 47, 0.85);
+backdrop-filter: blur(10px);
+transition: var(--transition);
 
-  @media (max-width: 1080px) {
-    padding: 0 40px;
-  }
-  @media (max-width: 768px) {
-    padding: 0 25px;
-  }
+@media (max-width: 768px) {
+  display: none;
+}
+
 
   @media (prefers-reduced-motion: no-preference) {
     ${props =>
@@ -55,12 +55,25 @@ const StyledHeader = styled.header`
 
 const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
-  position: relative;
-  width: 100%;
-  color: var(--lightest-slate);
-  font-family: var(--font-mono);
-  counter-reset: item 0;
+  margin-left : 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* Push the logo to the top corner */
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 12;
+  width: var(--nav-width); /* Set the desired width of the navigation bar */
+  height: 100vh;
+  padding: 20px 0; /* Adjust the padding as needed */
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
@@ -110,44 +123,44 @@ const StyledNav = styled.nav`
 `;
 
 const StyledLinks = styled.div`
-  display: flex;
-  align-items: center;
+/* Add spacing between the logo and links, and set the left margin */
+margin-top: 50px; /* Adjust as needed */
+margin-left: 20px; /* Add left margin */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 
-  @media (max-width: 768px) {
-    display: none;
-  }
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
-  ol {
-    ${({ theme }) => theme.mixins.flexBetween};
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  li {
+    
+    font-size: var(--fz-m);
+    counter-increment: item 1;
+    display: flex;
+    align-items: center;
 
-    li {
-      margin: 0 5px;
-      position: relative;
-      counter-increment: item 1;
-      font-size: var(--fz-xs);
+    a {
+      padding: 10px;
 
-      a {
-        padding: 10px;
-
-        &:before {
-          content: '0' counter(item) '.';
-          margin-right: 5px;
-          color: var(--green);
-          font-size: var(--fz-xxs);
-          text-align: right;
-        }
+      &:before {
+        content: '0' counter(item) '.';
+        margin-right: 5px;
+        color: var(--green);
+        font-size: var(--fz-xs);
+        text-align: right;
       }
     }
   }
+}
 
-  .resume-button {
-    ${({ theme }) => theme.mixins.smallButton};
-    margin-left: 15px;
-    font-size: var(--fz-xs);
-  }
+.resume-button {
+  ${({ theme }) => theme.mixins.smallButton};
+  margin-top: 15px; /* Add spacing between the links and the resume button */
+  font-size: var(--fz-xs);
+}
 `;
 
 const Nav = ({ isHome }) => {
@@ -205,11 +218,6 @@ const Nav = ({ isHome }) => {
     </div>
   );
 
-  const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-      Resume
-    </a>
-  );
 
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
@@ -227,7 +235,6 @@ const Nav = ({ isHome }) => {
                     </li>
                   ))}
               </ol>
-              <div>{ResumeLink}</div>
             </StyledLinks>
 
             <Menu />
@@ -257,15 +264,6 @@ const Nav = ({ isHome }) => {
                 </TransitionGroup>
               </ol>
 
-              <TransitionGroup component={null}>
-                {isMounted && (
-                  <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-                    <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-                      {ResumeLink}
-                    </div>
-                  </CSSTransition>
-                )}
-              </TransitionGroup>
             </StyledLinks>
 
             <TransitionGroup component={null}>

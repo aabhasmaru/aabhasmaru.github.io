@@ -16,6 +16,7 @@ import {
   IconStar,
   IconTwitter,
 } from '@components/icons';
+import IconNotePad from './notepad';
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -47,6 +48,8 @@ const Icon = ({ name }) => {
       return <IconStar />;
     case 'Twitter':
       return <IconTwitter />;
+    case 'Note':
+      return <IconNotePad />;
     default:
       return <IconExternal />;
   }

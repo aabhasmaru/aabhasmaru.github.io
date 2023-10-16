@@ -93,7 +93,7 @@ const StyledSidebar = styled.aside`
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
+    left: 0;
     padding: 50px 10px;
     width: min(75vw, 400px);
     height: 100vh;
@@ -101,7 +101,7 @@ const StyledSidebar = styled.aside`
     background-color: var(--light-navy);
     box-shadow: -10px 0px 30px -15px var(--navy-shadow);
     z-index: 9;
-    transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
+    transform: translateX(${props => (props.menuOpen ? 0 : -100)}vw);
     visibility: ${props => (props.menuOpen ? 'visible' : 'hidden')};
     transition: var(--transition);
   }

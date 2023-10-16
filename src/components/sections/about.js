@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import MyImage from '../../images/me.jpg';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
@@ -46,6 +46,72 @@ const StyledText = styled.div`
     }
   }
 `;
+// const StyledPic = styled.div`
+//   position: relative;
+//   max-width: 300px;
+
+//   @media (max-width: 768px) {
+//     margin: 50px auto 0;
+//     width: 70%;
+//   }
+
+//   .wrapper {
+//     ${({ theme }) => theme.mixins.boxShadow};
+//     display: block;
+//     position: relative;
+//     width: 100%;
+//     border-radius: var(--border-radius);
+//     background-color: var(--green);
+
+//     &:hover,
+//     &:focus {
+//       outline: 0;
+//       transform: translate(-4px, -4px);
+
+//       &:after {
+//         transform: translate(8px, 8px);
+//       }
+
+//       .img {
+//         filter: none;
+//         mix-blend-mode: normal;
+//       }
+//     }
+
+//     .img {
+//       position: relative;
+//       border-radius: var(--border-radius);
+//       mix-blend-mode: multiply;
+//       filter: grayscale(100%) contrast(1);
+//       transition: var(--transition);
+//     }
+
+//     &:before,
+//     &:after {
+//       content: '';
+//       display: block;
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       border-radius: var(--border-radius);
+//       transition: var(--transition);
+//     }
+
+//     &:before {
+//       top: 0;
+//       left: 0;
+//       background-color: var(--navy);
+//       mix-blend-mode: screen;
+//     }
+
+//     &:after {
+//       border: 2px solid var(--green);
+//       top: 14px;
+//       left: 14px;
+//       z-index: -1;
+//     }
+//   }
+// `;
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
@@ -54,62 +120,68 @@ const StyledPic = styled.div`
     margin: 50px auto 0;
     width: 70%;
   }
-
-  .wrapper {
+  .container {
     ${({ theme }) => theme.mixins.boxShadow};
-    display: block;
+   
+  }
+
+  .border {
+    height: 369px;
+    width: 290px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
     position: relative;
-    width: 100%;
-    border-radius: var(--border-radius);
-    background-color: var(--green);
+  }
 
-    &:hover,
-    &:focus {
-      outline: 0;
-      transform: translate(-4px, -4px);
+  .border:hover {
+    border: 1px solid white;
+  }
 
-      &:after {
-        transform: translate(8px, 8px);
-      }
+  .card {
+    height: 379px;
+    width: 300px;
+    background: grey;
+    border-radius: 10px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0 70px 63px -60px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
 
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
-      }
-    }
+  .card0 {
+    background: url(${MyImage}) center center no-repeat;
+    background-size: 300px;
+  }
 
-    .img {
-      position: relative;
-      border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: var(--transition);
-    }
+  .card0:hover {
+    background: url(${MyImage}) left center no-repeat;
+    background-size: 600px;
+  }
 
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
-    }
+  h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+  }
 
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--navy);
-      mix-blend-mode: screen;
-    }
+  .card0:hover h2 {
+    opacity: 1;
+  }
 
-    &:after {
-      border: 2px solid var(--green);
-      top: 14px;
-      left: 14px;
-      z-index: -1;
-    }
+  .fa {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .card0:hover .fa {
+    opacity: 1;
   }
 `;
 
@@ -135,10 +207,10 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Aabhas Maru and I enjoy creating things that live on the internet.
+              My interest in web development started back in 2012 when I decided to try editing
+              custom Tumblr themes — turns out hacking together a custom reblog button taught me a
+              lot about HTML &amp; CSS!
             </p>
 
             <p>
@@ -169,7 +241,7 @@ const About = () => {
           </ul>
         </StyledText>
 
-        <StyledPic>
+        {/* <StyledPic>
           <div className="wrapper">
             <StaticImage
               className="img"
@@ -179,6 +251,15 @@ const About = () => {
               formats={['AUTO', 'WEBP', 'AVIF']}
               alt="Headshot"
             />
+          </div>
+        </StyledPic> */}
+        <StyledPic>
+          <div className="container">
+            <div className="card card0">
+              <div className="border">
+                <h2>Aabhas Maru</h2>
+              </div>
+            </div>
           </div>
         </StyledPic>
       </div>

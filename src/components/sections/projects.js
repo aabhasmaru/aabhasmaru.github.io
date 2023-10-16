@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -57,7 +59,7 @@ const StyledProject = styled.li`
     }
   }
 
-  a {
+  span {
     position: relative;
     z-index: 1;
   }
@@ -94,7 +96,7 @@ const StyledProject = styled.li`
       margin-right: -10px;
       color: var(--light-slate);
 
-      a {
+      span {
         ${({ theme }) => theme.mixins.flexCenter};
         padding: 5px 7px;
 
@@ -119,7 +121,7 @@ const StyledProject = styled.li`
     color: var(--lightest-slate);
     font-size: var(--fz-xxl);
 
-    a {
+    span {
       position: static;
 
       &:before {
@@ -132,6 +134,15 @@ const StyledProject = styled.li`
         top: 0;
         left: 0;
       }
+      color: var(--lightest-slate);
+
+      &:hover {
+        color: var(--green); /* Change color on hover */
+      }
+
+      &:visited {
+        color: var(--green); /* Change color after visiting */
+      }
     }
   }
 
@@ -139,7 +150,7 @@ const StyledProject = styled.li`
     color: var(--light-slate);
     font-size: 17px;
 
-    a {
+    span {
       ${({ theme }) => theme.mixins.inlineLink};
     }
   }
@@ -180,8 +191,7 @@ const Projects = () => {
             frontmatter {
               title
               tech
-              github
-              external
+              cta
             }
             html
           }
@@ -213,7 +223,7 @@ const Projects = () => {
 
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { title, tech, cta } = frontmatter;
 
     return (
       <div className="project-inner">
@@ -222,29 +232,14 @@ const Projects = () => {
             <div className="folder">
               <Icon name="Folder" />
             </div>
-            <div className="project-links">
-              {github && (
-                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
-                  <Icon name="GitHub" />
-                </a>
-              )}
-              {external && (
-                <a
-                  href={external}
-                  aria-label="External Link"
-                  className="external"
-                  target="_blank"
-                  rel="noreferrer">
-                  <Icon name="External" />
-                </a>
-              )}
-            </div>
           </div>
 
           <h3 className="project-title">
-            <a href={external} target="_blank" rel="noreferrer">
+            <span
+              onClick={() => openDocuments(cta)}
+              style={{ cursor: 'pointer' }}>
               {title}
-            </a>
+            </span>
           </h3>
 
           <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
@@ -307,6 +302,12 @@ const Projects = () => {
       </button>
     </StyledProjectsSection>
   );
+  function openDocuments(cta) {
+    const documentLinks = Array.isArray(cta) ? cta : [cta];
+    documentLinks.forEach(link => {
+      window.open(link, '_blank', 'noopener noreferrer');
+    });
+  }
 };
 
 export default Projects;

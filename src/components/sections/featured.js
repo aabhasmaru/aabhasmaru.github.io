@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
@@ -202,7 +201,7 @@ const StyledProject = styled.li`
       margin: 10px 0;
 
       li {
-        margin: 0 10px 5px 0;
+        margin: 0 20px 5px 0;
         color: var(--lightest-slate);
       }
     }
@@ -314,11 +313,7 @@ const Featured = () => {
           node {
             frontmatter {
               title
-              cover {
-                childImageSharp {
-                  gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-                }
-              }
+              video
               tech
               github
               external
@@ -355,8 +350,10 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
-            const image = getImage(cover);
+            const { external, title, tech, github, video, cta } = frontmatter;
+            // const image = getImage(cover);
+
+            const src = `videos/${video}`;
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
@@ -382,29 +379,46 @@ const Featured = () => {
                     )}
 
                     <div className="project-links">
-                      {cta && (
-                        <a href={cta} aria-label="Course Link" className="cta">
-                          Learn More
+                      {/* {cta && (
+                        <a href={cta} target="_blank" aria-label="Course Link" className="cta" rel="noreferrer">
+                          Document 
                         </a>
+                      )} */}
+                      {cta && (
+                        <button
+                          onClick={() => openDocuments(cta)}
+                          aria-label="Course Link"
+                          className="cta">
+                          Document
+                        </button>
                       )}
+
                       {github && (
                         <a href={github} aria-label="GitHub Link">
                           <Icon name="GitHub" />
                         </a>
                       )}
-                      {external && !cta && (
-                        <a href={external} aria-label="External Link" className="external">
-                          <Icon name="External" />
+                      {/* {external &&  (
+                        <a href={external} target="_blank" aria-label="External Link" className="cta" rel="noreferrer">
+                          Document Two
                         </a>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
-                    <GatsbyImage image={image} alt={title} className="img" />
-                  </a>
+                  {video && (
+                    // eslint-disable-next-line jsx-a11y/media-has-caption
+                    <video
+                      src={src}
+                      width="600"
+                      height="300"
+                      controls="controls"
+                      autoPlay={false}
+                      type="video/mp4"
+                    />
+                  )}
                 </div>
               </StyledProject>
             );
@@ -412,6 +426,12 @@ const Featured = () => {
       </StyledProjectsGrid>
     </section>
   );
+  function openDocuments(cta) {
+    const documentLinks = Array.isArray(cta) ? cta : [cta];
+    documentLinks.forEach(link => {
+      window.open(link, '_blank', 'noopener noreferrer');
+    });
+  }
 };
 
 export default Featured;

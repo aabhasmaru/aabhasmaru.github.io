@@ -11,6 +11,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve(`src/templates/post.js`);
   const tagTemplate = path.resolve('src/templates/tag.js');
+  const blogpostTemplate = path.resolve('src/templates/blogpost.js');
 
   const result = await graphql(`
     {
@@ -30,6 +31,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       tagsGroup: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___tags) {
           fieldValue
+        }
+      }
+    }
+  `);
+
+  const blogresult = await graphql(`
+    query {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/content/blogs/" } }) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
         }
       }
     }
@@ -61,6 +76,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
+      },
+    });
+  });
+
+  const blog = blogresult.data.allMarkdownRemark.edges;
+  blog.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: blogpostTemplate,
+      context: {
+        slug: node.frontmatter.slug,
       },
     });
   });

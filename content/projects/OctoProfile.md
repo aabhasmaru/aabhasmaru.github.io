@@ -1,8 +1,9 @@
 ---
-date: '2019-07-15'
-title: 'OctoProfile'
-github: 'https://github.com/bchiang7/octoprofile'
-external: 'https://octoprofile.now.sh'
+date: '2020-07-15'
+title: 'Project to be Added'
+cta :
+  - 'introToAnalysis.pdf'   
+  - 'requirementAnalysisandDesignDoc.pdf'
 tech:
   - Next.js
   - Chart.js
