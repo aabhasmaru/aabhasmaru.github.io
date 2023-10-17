@@ -430,7 +430,10 @@ const Featured = () => {
   function openDocuments(cta) {
     const documentLinks = Array.isArray(cta) ? cta : [cta];
     documentLinks.forEach(link => {
-      window.open(link, '_blank', 'noopener noreferrer');
+      const anchor = document.createElement('a');
+      anchor.href = link;
+      anchor.target = '_blank';
+      anchor.click();
     });
   }
 };
