@@ -174,28 +174,28 @@ const Books = () => {
 
   const rectanglesData = [
     {
-      image: 'b1.jpeg',
+      image: 'b2.png',
       name: 'Financial Shenanigans: How to Detect Accounting Gimmicks & Fraud in Financial Reports',
       author: 'Howard Mark Schilit',
       text:
         ' It is a captivating exposé that unveils the deceptive tactics and manipulative practices employed by corporations to distort financial statements, providing readers with a keen insight into the dark underbelly of corporate finance. With meticulous analysis and real-world examples, it equips readers with the knowledge and tools necessary to detect and navigate through the intricate web of financial deceit.',
-      link: 'https://www.nps.gov/katm/learn/fat-bear-week.htm',
+      link: 'https://a.co/d/icrszul',
     },
     {
-      image: 'b2.png',
+      image: 'b3.jpeg',
       name: 'Coffee Can Investing',
       author: 'Saurabh Mukharjea',
       text:
         'It is a compelling book that guides and presents a unique and simplified approach to long-term investing, emphasizing the power of patience and compounding. With insightful anecdotes and practical strategies, the book encourages readers to focus on high-quality stocks and hold them for extended periods, leading to potentially significant wealth creation over time.',
-      link: 'https://www.nps.gov/katm/learn/fat-bear-week.htm',
+      link: 'https://a.co/d/iHBR0qN',
     },
     {
-      image: 'b3.jpeg',
+      image: 'b1.jpeg',
       name: 'The Power of Habit',
       author: 'Charles Duhigg',
       text:
         'The book unveils the profound influence of our daily routines, offering captivating insights into the science of habit formation and practical strategies for personal transformation. Through compelling stories and research-backed principles, it empowers readers to understand and harness the power of habits to achieve lasting change and unlock their full potential.',
-      link: 'https://www.nps.gov/katm/learn/fat-bear-week.htm',
+      link: 'https://a.co/d/1DzYqne',
     },
   ];
 
