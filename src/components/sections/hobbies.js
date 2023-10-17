@@ -33,7 +33,11 @@ const Hobbies = () => {
         lead to remarkable achievements, much like the breathtaking view that awaits at the summit.
         It is through these experiences that I am reminded of the limitless potential within each of
         us, and the realization that anything is attainable when we wholeheartedly pursue our dreams
-        Till date I have complete 14 out of 48 Four Thousand Footers in New Hampshire!
+        Till date I have complete{' '}
+        <a href="http://4000footers.com/nh.shtml" target="_blank" rel="noreferrer">
+          14 out of 48 Four Thousand Footers
+        </a>{' '}
+        in New Hampshire!
       </p>
       <div style={{ paddingTop: 60 }}>
         <Hiking />

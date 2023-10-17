@@ -5,7 +5,7 @@ video: 'pro.mp4'
 github: ''
 external: ''
 cta:
-  - 'introToAnalysis.pdf'   
+  - 'IntroToAnalysis.pdf'   
   - 'requirementAnalysisandDesignDoc.pdf'
 tech:
   - React

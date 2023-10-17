@@ -4,7 +4,7 @@ title: 'Introduction to Analytics'
 video: 'pro.mp4'
 external: 'introToAnalysis.pdf'
 cta:
-  - 'introToAnalysis.pdf'   
+  - 'IntroToAnalysis.pdf'   
   - 'requirementAnalysisandDesignDoc.pdf'
 
 
