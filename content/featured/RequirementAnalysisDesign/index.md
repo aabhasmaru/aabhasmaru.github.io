@@ -27,5 +27,7 @@ tech:
 
 
 - USP: The product will be integrated with open API's of chatgpt, that will allow users to create and customize their own travel plan and based on this they will be directed toward the flights and hotels booking prices.
+
 - Plus, chatgpt will also help them to identify special discounts as well. 
+
 - For students, along with chatgpt we will integrate the platform with "Student Universe" so that they can avail the best student discounts.
