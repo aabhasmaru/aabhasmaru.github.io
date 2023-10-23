@@ -247,10 +247,8 @@ const StyledProject = styled.li`
     grid-row: 1 / -1;
     position: relative;
     z-index: 1;
-    
 
     @media (max-width: 768px) {
-    
       grid-column: 1 / -1;
       height: 100%;
       opacity: 0.25;
