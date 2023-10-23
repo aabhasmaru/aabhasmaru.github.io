@@ -2,22 +2,22 @@
 date: '3'
 title: 'Introduction to Analytics'
 video: 'pro.mp4'
-external: 'introToAnalysis.pdf'
+external: 'IntroToAnalysis.pdf'
 cta:
-  - 'IntroToAnalysis.pdf'   
+  - 'introToAnalysis.pdf'   
   - 'requirementAnalysisandDesignDoc.pdf'
 
 
 
 tech:
-  - React
-  - Express
-  - Spotify API
-  - Styled Components
+  - R
+  - Data Analysis
+  - Data Mining
+  - Data Visualization
 ---
 
-- Organized the un-organized sales data of a company in different continents.
-
-- Used R language to summarize, visualize and analyze the data.
-
-- Made the observation and listed out what data is telling in the attached document.
+- Extracted a sales data of 5000+ entries and 8 attributes
+- Cleaned the data in Excel by removing unusual values and summarized the data in excel
+- Visualized and analyzed the data using R programming language (Bar graphs, Pie Charts, Histograms, Scatter diagram)
+- Computed differences between appropriate variable values and created a new variable and computed the mean & median of the new variable
+- Presented the analysis in brief using MS Powerpoint
