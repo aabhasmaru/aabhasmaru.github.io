@@ -147,6 +147,7 @@ const StyledProject = styled.li`
   }
 
   .project-description {
+    margin-right: 20px; 
     color: var(--light-slate);
     font-size: 17px;
 

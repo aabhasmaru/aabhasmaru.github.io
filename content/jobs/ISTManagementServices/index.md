@@ -1,7 +1,7 @@
 ---
 date: 'Present'
 
-title: 'Creative Technologist Co-op'
+title: 'Project Co-ordinator'
 
 company: 'IST Management Services'
 

@@ -4,7 +4,7 @@ title: 'Project Business Analysis - New Product Proposition'
 video: 'pro.mp4'
 external: 'introToAnalysis.pdf'
 cta:
-  - 'IntroToAnalysis.pdf'   
+  - 'introToAnalysis.pdf'   
   - 'requirementAnalysisandDesignDoc.pdf'
 
 

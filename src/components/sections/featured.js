@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import sr from '@utils/sr';
@@ -242,12 +242,15 @@ const StyledProject = styled.li`
 
   .project-image {
     ${({ theme }) => theme.mixins.boxShadow};
+    margin-right: 20px;
     grid-column: 6 / -1;
     grid-row: 1 / -1;
     position: relative;
     z-index: 1;
+    
 
     @media (max-width: 768px) {
+    
       grid-column: 1 / -1;
       height: 100%;
       opacity: 0.25;
@@ -331,7 +334,20 @@ const Featured = () => {
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const [isExpanded, setIsExpanded] = useState(false);
+  let shouldDisplayBtn = true;
 
+  // Function to truncate HTML content
+  function truncateHtmlContent(htmlContent) {
+    const words = htmlContent.split(' ');
+    if (words.length <= 70) {
+      shouldDisplayBtn = false;
+      return htmlContent;
+    } else {
+      shouldDisplayBtn = true;
+    }
+    return `${words.slice(0, 70).join(' ')}...`;
+  }
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
@@ -344,7 +360,7 @@ const Featured = () => {
   return (
     <section id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Academic Projects 
+        Academic Projects
       </h2>
 
       <StyledProjectsGrid>
@@ -362,19 +378,51 @@ const Featured = () => {
                   <div>
                     <p className="project-overline">Academic Project</p>
 
-                    <h3 className="project-title">
-                      <a href={external}>{title}</a>
-                    </h3>
+                    <h3 className="project-title">{title}</h3>
 
-                    <div
+                    {/* <div
                       className="project-description"
-                      dangerouslySetInnerHTML={{ __html: html }}
+                      // dangerouslySetInnerHTML={{ __html: html }}
+                      dangerouslySetInnerHTML={{
+                        __html: isExpanded ? html : truncateHtmlContent(html),
+                      }}
                     />
+                    {shouldDisplayBtn && (
+                      <button
+                        onClick={() => setIsExpanded(!isExpanded)}
+                        style={{
+                          backgroundColor: 'transparent',
+                          color: '#0073b1',
+                          fontWeight: 600,
+                        }}>
+                        {isExpanded ? 'Read Less' : 'Read More'}
+                      </button>
+                    )} */}
+                    <div className="project-description" style={{ position: 'relative' }}>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: isExpanded ? html : truncateHtmlContent(html),
+                        }}
+                      />
+                      {shouldDisplayBtn && (
+                        <button
+                          onClick={() => setIsExpanded(!isExpanded)}
+                          style={{
+                            display: 'inline',
+                            backgroundColor: 'transparent',
+                            color: '#64ffda',
+                            fontWeight: 600,
+                            marginLeft: '10px',
+                          }}>
+                          {isExpanded ? 'Read Less' : 'Read More'}
+                        </button>
+                      )}
+                    </div>
 
                     {tech.length && (
                       <ul className="project-tech-list">
                         {tech.map((tech, i) => (
-                          <li key={i}>{tech}</li>
+                          <li key={i}>{tech} | </li>
                         ))}
                       </ul>
                     )}
