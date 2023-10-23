@@ -17,7 +17,7 @@ tech:
 
 - Created Context diagram, onion map and PUC to define actors and understand where and at what stage they will interact with the platform.
 
-- Based on this created functional and non-functional requirements using [Volere]() requirement method.
+- Based on this created functional and non-functional requirements using [Volere]("www.google.com") requirement method.
 
 - Prioritized the requirements using Volere Prioritization matrix.
 
