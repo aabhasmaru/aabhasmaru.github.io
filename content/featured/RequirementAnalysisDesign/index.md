@@ -8,11 +8,14 @@ cta:
   - 'introToAnalysis.pdf'
   - 'requirementAnalysisandDesignDoc.pdf'
 tech:
-  - VS Code
-  - Sublime Text
-  - Atom
-  - iTerm2
-  - Hyper
+  - Requirement Gathering
+  - Requirement Elicitation
+  - Defining Requirement
+  - BRD
+  - PUC's
+  - Requirement Prioritization
+  - Wireframing
+  - Prototyping
 ---
 
 - Created Context diagram, onion map and PUC to define actors and understand where and at what stage they will interact with the platform.
@@ -27,6 +30,4 @@ tech:
 
 - USP: The product will be integrated with open API's of chatgpt, that will allow users to create and customize their own travel plan and based on this they will be directed toward the flights and hotels booking prices.
 
-- Plus, chatgpt will also help them to identify special discounts as well.
-
-- For students, along with chatgpt we will integrate the platform with "Student Universe" so that they can avail the best student discounts.
+- For students, along with chatgpt we will integrate the platform with "Student Universe" so that they can avail the best student discounts

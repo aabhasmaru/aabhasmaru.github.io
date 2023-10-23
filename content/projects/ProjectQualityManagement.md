@@ -2,7 +2,7 @@
 
 date: 'Spring 2022'
 
-title: 'User Needs Assessment'
+title: 'Project Quality Management'
 
 cta :
   - 'introToAnalysis.pdf'   
@@ -28,5 +28,3 @@ showInProjects: true
 - Tools like Jobs to be Done, Empathy Map, Storytelling
 
 - Case Study
-
- 
