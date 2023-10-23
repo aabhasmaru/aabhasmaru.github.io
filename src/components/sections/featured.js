@@ -105,7 +105,7 @@ const StyledProject = styled.li`
       justify-content: center;
       height: 100%;
       grid-column: 1 / -1;
-      padding: 40px 40px 10px;
+      padding: 40px 40px -2px;
       z-index: 5;
     }
 
