@@ -1,14 +1,14 @@
 ---
-
 date: 'Spring 2022'
 
 title: 'Project Quality Management'
 
-cta :
-  - 'introToAnalysis.pdf'   
-  - 'requirementAnalysisandDesignDoc.pdf'
-tech:
+cta:
+  - 'Project Quality Management/FinalPresentation.pdf'
+  - 'Project Quality Management/IndividualAssignment.pdf'
+  - 'Project Quality Management/ProjectQualityManagement.pdf'
 
+tech:
   - Algolia
 
   - WordPress
@@ -18,7 +18,6 @@ tech:
 company: 'Northeastern University'
 
 showInProjects: true
-
 ---
 
 - User Persona

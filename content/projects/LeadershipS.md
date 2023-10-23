@@ -5,8 +5,9 @@ title: 'Leadership Strategies'
 
 
 cta :
-  - 'introToAnalysis.pdf'   
-  - 'requirementAnalysisandDesignDoc.pdf'
+ 
+  - 'Project Quality Management/IndividualAssignment.pdf'
+  - 'Project Quality Management/ProjectQualityManagement.pdf'
 
 tech:
   - Ember

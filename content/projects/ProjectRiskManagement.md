@@ -4,8 +4,9 @@ date: '2022-04-30'
 title: 'Project Risk Management'
 
 cta :
-  - 'introToAnalysis.pdf'   
-  - 'requirementAnalysisandDesignDoc.pdf'
+  - 'Project Risk Management/Group 5_Risk Register.xlsx'   
+  - 'Project Risk Management/Group 5_Risk Register.xlsx'
+  - 'Project Risk Management/Project Risk Management.pdf'
 
 tech:
   - MusicKit.js

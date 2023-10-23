@@ -5,15 +5,14 @@ video: 'pro.mp4'
 github: ''
 external: ''
 cta:
-  - 'introToAnalysis.pdf'
-  - 'requirementAnalysisandDesignDoc.pdf'
+  - 'Strategic Analysis and User Needs Assessment/Create - Business Architecture Case Study.pdf'
+  - 'Strategic Analysis and User Needs Assessment/Strategic Analysis and Needs Assessment.pdf'
 tech:
   - User Persona
   - User Journey Map
   - User Stories
   - Design Thinking Tools
   - Survey/Questionnnaire
-
 ---
 
 - Generated an idea and created user journey map and user persona

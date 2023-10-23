@@ -2,10 +2,9 @@
 date: '3'
 title: 'Introduction to Analytics'
 video: 'pro.mp4'
-external: 'IntroToAnalysis.pdf'
-cta:
-  - 'introToAnalysis.pdf'   
-  - 'requirementAnalysisandDesignDoc.pdf'
+external: ''
+cta:  
+  - '/IntroToAnalysis/Introduction to Analytics.pdf'
 
 
 

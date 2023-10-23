@@ -4,8 +4,8 @@ date: 'Spring 2022'
 title: 'Project Scope Management'
 
 cta :
-  - 'introToAnalysis.pdf'   
-  - 'requirementAnalysisandDesignDoc.pdf'
+  - 'Project Scope Management/FINAL TEAM_5_Scope Baseline Presentation_PJM6005.pdf'   
+  - 'Project Scope Management/Project Scope Management.pdf'
 
 tech:
   - WordPress

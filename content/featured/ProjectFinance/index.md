@@ -5,8 +5,8 @@ video: 'pro.mp4'
 github: ''
 external: ''
 cta:
-  - 'introToAnalysis.pdf'
-  - 'requirementAnalysisandDesignDoc.pdf'
+  - 'Project Finance/Feasibility Analysis.xlsx'
+  - 'Project Finance/Feasibility Study.pdf'
 tech:
   - React
   - Styled Components

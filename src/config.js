@@ -12,7 +12,7 @@ module.exports = {
     {
       name: 'About',
       url: '/#about',
-    },
+    },  
     {
       name: 'Experience',
       url: '/#jobs',

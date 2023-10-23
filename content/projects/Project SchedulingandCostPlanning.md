@@ -4,8 +4,8 @@ date: '2022 - 03 - 01'
 
 title: 'Project Scheduling and Cost Planning'
 cta :
-  - 'introToAnalysis.pdf'   
-  - 'requirementAnalysisandDesignDoc.pdf'
+  
+  - 'Project Scheduling and Cost Planning/PJM 6025 - Final Presentation.pdf'
 
 tech:
 

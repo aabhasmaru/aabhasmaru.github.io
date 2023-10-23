@@ -4,8 +4,8 @@ date: '2023-07-01'
 title: 'Leadership Strategies'
 
 cta :
-  - 'introToAnalysis.pdf'   
-  - 'requirementAnalysisandDesignDoc.pdf'
+  - 'Project Quality Management/IndividualAssignment.pdf'
+  - 'Project Quality Management/ProjectQualityManagement.pdf'
 tech:
   - Ember
 

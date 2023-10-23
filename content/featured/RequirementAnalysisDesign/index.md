@@ -5,8 +5,8 @@ video: 'pro.mp4'
 github: ''
 external: ''
 cta:
-  - 'introToAnalysis.pdf'
-  - 'requirementAnalysisandDesignDoc.pdf'
+  - 'Requirement Analysis and Design/Group 2_Presentation.pdf'
+  - 'Requirement Analysis and Design/Requirement Analysis & Design.pdf'
 tech:
   - Requirement Gathering
   - Requirement Elicitation
