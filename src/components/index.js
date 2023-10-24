@@ -15,4 +15,4 @@ export { default as Projects } from './sections/projects';
 export { default as Contact } from './sections/contact';
 export { default as Blogs } from './sections/blogs';
 export { default as Hobbies } from './sections/hobbies';
-export { default as Search } from './search';
+// export { default as Search } from './search';

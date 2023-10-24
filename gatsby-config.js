@@ -17,39 +17,39 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    {
-      resolve: `gatsby-plugin-local-search`,
-      options: {
-        name: 'pages',
-        engine: 'lunr',
-        query: `
-          {
-            allMarkdownRemark {
-              nodes {
-                id
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                  description
-                }
-              }
-            }
-          }
-        `,
-        ref: 'id',
-        index: ['title', 'description'],
-        store: ['id', 'path', 'title', 'description'],
-        normalizer: ({ data }) =>
-          data.allMarkdownRemark.nodes.map(node => ({
-            id: node.id,
-            path: node.fields.slug,
-            title: node.frontmatter.title,
-            description: node.frontmatter.description,
-          })),
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-local-search`,
+    //   options: {
+    //     name: 'pages',
+    //     engine: 'lunr',
+    //     query: `
+    //       {
+    //         allMarkdownRemark {
+    //           nodes {
+    //             id
+    //             fields {
+    //               slug
+    //             }
+    //             frontmatter {
+    //               title
+    //               description
+    //             }
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     ref: 'id',
+    //     index: ['title', 'description'],
+    //     store: ['id', 'path', 'title', 'description'],
+    //     normalizer: ({ data }) =>
+    //       data.allMarkdownRemark.nodes.map(node => ({
+    //         id: node.id,
+    //         path: node.fields.slug,
+    //         title: node.frontmatter.title,
+    //         description: node.frontmatter.description,
+    //       })),
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
