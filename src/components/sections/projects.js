@@ -147,7 +147,7 @@ const StyledProject = styled.li`
   }
 
   .project-description {
-    margin-right: 20px; 
+    margin-right: 20px;
     color: var(--light-slate);
     font-size: 17px;
 
@@ -202,6 +202,7 @@ const Projects = () => {
   `);
 
   const [showMore, setShowMore] = useState(false);
+
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
@@ -225,37 +226,64 @@ const Projects = () => {
   const projectInner = node => {
     const { frontmatter, html } = node;
     const { title, tech, cta } = frontmatter;
+    const rawText = new DOMParser().parseFromString(html, 'text/html').body.textContent || '';
+    const words = rawText.split(/\s+/);
+    const shouldTruncate = words.length > 21;
+
+    const [isExpanded, setIsExpanded] = useState(false);
+    const displayedHtml =
+      shouldTruncate && !isExpanded ? `${words.slice(0, 21).join(' ')}...` : html;
 
     return (
-      <div className="project-inner">
-        <header>
-          <div className="project-top">
-            <div className="folder">
-              <Icon name="Folder" />
+      <>
+        <div className="project-inner">
+          <header>
+            <div className="project-top">
+              <div className="folder">
+                <Icon name="Folder" />
+              </div>
             </div>
-          </div>
 
-          <h3 className="project-title">
-            <span
-              onClick={() => openDocuments(cta)}
-              style={{ cursor: 'pointer' }}>
-              {title}
-            </span>
-          </h3>
+            <h3 className="project-title">
+              <span onClick={() => openDocuments(cta)} style={{ cursor: 'pointer' }}>
+                {title}
+              </span>
+            </h3>
 
-          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
-        </header>
+            {/* <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} /> */}
+            <div
+              className="project-description"
+              dangerouslySetInnerHTML={{ __html: displayedHtml }}
+            />
+          </header>
 
-        <footer>
-          {tech && (
-            <ul className="project-tech-list">
-              {tech.map((tech, i) => (
-                <li key={i}>{tech}</li>
-              ))}
-            </ul>
+          <footer>
+            {tech && (
+              <ul className="project-tech-list">
+                {tech.map((tech, i) => (
+                  <li key={i}>{tech}</li>
+                ))}
+              </ul>
+            )}
+          </footer>
+        </div>
+        <div>
+          {shouldTruncate && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              style={{
+                margin: '10px',
+                position: 'absolute',
+                top: isExpanded ? '900px' : '270px',
+                backgroundColor: 'transparent',
+                color: '#64ffda',
+                fontWeight: 300,
+              }}>
+              {isExpanded ? 'Read Less' : 'Read More'}
+            </button>
           )}
-        </footer>
-      </div>
+        </div>
+      </>
     );
   };
 

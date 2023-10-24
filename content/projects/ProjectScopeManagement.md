@@ -8,11 +8,11 @@ cta :
   - 'Project Scope Management/Project Scope Management.pdf'
 
 tech:
-  - WordPress
+  # - WordPress
 
-  - Timber
+  # - Timber
 
-  - WooCommerce
+  # - WooCommerce
 
 company: 'Northeastern University'
 

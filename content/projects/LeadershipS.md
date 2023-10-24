@@ -10,11 +10,11 @@ cta :
   - 'Project Quality Management/ProjectQualityManagement.pdf'
 
 tech:
-  - Ember
+  # - Ember
 
-  - JS
+  # - JS
 
-  - SCSS
+  # - SCSS
 
 company: 'Northeastern University'
 

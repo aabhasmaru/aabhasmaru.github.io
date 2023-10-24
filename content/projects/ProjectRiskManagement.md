@@ -9,11 +9,11 @@ cta :
   - 'Project Risk Management/Project Risk Management.pdf'
 
 tech:
-  - MusicKit.js
+  # - MusicKit.js
 
-  - JS
+  # - JS
 
-  - SCSS
+  # - SCSS
 
 company: 'Northeastern University'
 

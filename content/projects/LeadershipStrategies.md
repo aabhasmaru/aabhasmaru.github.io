@@ -7,11 +7,11 @@ cta :
   - 'Project Quality Management/IndividualAssignment.pdf'
   - 'Project Quality Management/ProjectQualityManagement.pdf'
 tech:
-  - Ember
+  # - Ember
 
-  - JS
+  # - JS
 
-  - SCSS
+  # - SCSS
 
 company: 'Northeastern University'
 

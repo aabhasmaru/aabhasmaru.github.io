@@ -9,13 +9,13 @@ cta :
 
 tech:
 
-  - Angular
+  # - Angular
 
-  - Node
+  # - Node
 
-  - Express
+  # - Express
 
-  - MongoDB
+  # - MongoDB
 
 company: 'Northeastern University'
 

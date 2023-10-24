@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import Search from '../search';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -61,12 +62,7 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Aabhas Maru.</h2>;
-  const three = (
-    <h3 className='medium-heading'>
-      {' '}
-      Aspiring Product/ Project Manager.
-    </h3>
-  );
+  const three = <h3 className="medium-heading"> Aspiring Product/ Project Manager.</h3>;
   const four = (
     <>
       <p>
@@ -82,6 +78,10 @@ const Hero = () => {
 
   return (
     <StyledHeroSection>
+      {/* <header>
+        <h1>My Gatsby Site</h1>
+        <Search />
+      </header> */}
       {prefersReducedMotion ? (
         <>
           {items.map((item, i) => (

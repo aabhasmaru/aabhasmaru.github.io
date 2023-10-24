@@ -177,7 +177,7 @@ const StyledProject = styled.li`
 
     strong {
       color: var(--white);
-      font-weight: normal;
+      font-weight: 500;
     }
   }
 
@@ -196,6 +196,7 @@ const StyledProject = styled.li`
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
       white-space: nowrap;
+      font-weight: bold;
     }
 
     @media (max-width: 768px) {
@@ -242,7 +243,6 @@ const StyledProject = styled.li`
 
   .project-image {
     ${({ theme }) => theme.mixins.boxShadow};
-    margin-right: 20px;
     grid-column: 6 / -1;
     grid-row: 1 / -1;
     position: relative;
@@ -302,6 +302,14 @@ const StyledProject = styled.li`
       }
     }
   }
+  .project-image.even {
+    margin-left : -50px;
+}
+
+.project-image.odd {
+    margin-left: 55px;
+}
+
 `;
 
 const Featured = () => {
@@ -454,7 +462,7 @@ const Featured = () => {
                   </div>
                 </div>
 
-                <div className="project-image">
+                <div className={`project-image ${i % 2 === 0 ? 'even' : 'odd'}`}>
                   {video && (
                     // eslint-disable-next-line jsx-a11y/media-has-caption
                     <video
