@@ -1,8 +1,11 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useRef, useState } from 'react';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
-
 import { usePrefersReducedMotion } from '@hooks';
+import mtDesc from '../mountainData';
 
 const Hobbies = () => {
   const revealTitle = useRef(null);
@@ -35,7 +38,7 @@ const Hobbies = () => {
         us, and the realization that anything is attainable when we wholeheartedly pursue our dreams
         Till date I have complete{' '}
         <a href="http://4000footers.com/nh.shtml" target="_blank" rel="noreferrer">
-          14 out of 48 Four Thousand Footers
+          13 out of 48 Four Thousand Footers
         </a>{' '}
         in New Hampshire!
       </p>
@@ -60,22 +63,44 @@ const Hiking = () => {
     'm4.png',
     'm1.png',
     'm2.png',
+    'm3.png',
+    'm4.png',
     'm1.png',
     'm2.png',
+    'm3.png',
+    'm4.png',
     'm1.png',
-    'm2.png',
-    'm1.png',
-    'm2.png',
-    'm1.png',
-    'm2.png',
-    'm1.png',
-    'm2.png',
   ];
-  const texts = ['Mt. 1', 'Mt. 2', 'Mt. 3', 'Mt. 4', 'Mt. 5', 'Mt. 6'];
-  const mainImages = ['hiking.jpg', 'm4.png', 'm2.png', 'hiking.jpg', 'hiking.jpg', 'hiking.jpg'];
-  const mainTexts = [
-    "Beyond my professional pursuits, I find solace and inspiration in the great outdoors, particularly through the invigorating activity of hiking. It is in nature's embrace that I discover a profound sense of tranquility and inner peace. Each hiking expedition becomes a personal journey, unveiling invaluable life lessons along the way. Whether faced with treacherous trails or challenging terrains, hiking teaches me the essence of resilience and self-belief. It reinforces the notion that perseverance and unwavering determination can lead to remarkable achievements, much like the breathtaking view that awaits at the summit. It is through these experiences that I am reminded of the limitless potential within each of us, and the realization that anything is attainable when we wholeheartedly pursue our dreams Till date I have complete 9 out of 48 Four Thousand Footers in New Hampshire",
+  const name = [
+    'Mt Washington',
+    'Mt. Adams',
+    'Mt. Monroe',
+    'Mt. Madison',
+    'Mt. Lafayette',
+    'Mt. Lincoln',
+    'Mt. South Twin',
+    'Mt. North Twin',
+    'Mt. Garfield',
+    'Mt. Liberty',
+    'Mt. Flume',
+    'Mt. Galehead',
+    'Mt. Tacumseh',
   ];
+  // const mainImages = [
+  //   'hiking-images/Mt. Washington.jpeg',
+  //   'hiking-images/Mt. Adams.jpeg',
+  //   'hiking-images/Mt. Monroe.jpeg',
+  //   'hiking-images/Mt. Madison.jpeg',
+  //   'hiking-images/Mt. Lafayette.jpeg',
+  //   'hiking-images/Mt. Lincoln.jpeg',
+  //   'hiking-images/Mt. South Twin.jpg',
+  //   'hiking-images/Mt. North Twin.jpeg',
+  //   'hiking-images/Mt. Garfield.jpeg',
+  //   'hiking-images/Mt. Liberty.jpeg',
+  //   'hiking-images/Mt. Flume.jpeg',
+  //   'hiking-images/Mt. Galehead.jpg',
+  //   'hiking-images/Mt. Tacumseh.jpeg',
+  // ];
 
   const circleStyle = {
     width: '100%',
@@ -116,12 +141,10 @@ const Hiking = () => {
     margin: 20,
   };
 
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedText, setSelectedText] = useState(null);
+  const [selectedMountain, setSelectedMountain] = useState(null);
 
   const handleImageClick = index => {
-    setSelectedImage(mainImages[index]);
-    setSelectedText(mainTexts[index]);
+    setSelectedMountain(mtDesc[index]);
   };
   const circleContainerStyle = {
     width: '100%',
@@ -152,17 +175,43 @@ const Hiking = () => {
               key={index}
               onMouseEnter={() => handleImageHover(index)}
               onMouseLeave={handleImageLeave}
+              onFocus={() => handleImageHover(index)}
+              onBlur={handleImageLeave}
               onClick={() => handleImageClick(index)}>
               <img src={image} alt={`${index + 1}`} style={imageStyle} />
             </div>
-            <div style={{ textAlign: 'center', padding: 10 }}>{texts[index]}</div>
+            <div style={{ textAlign: 'center', padding: 10 }}>{name[index]}</div>
           </div>
         ))}
       </div>
-      {selectedImage && (
+      {selectedMountain && (
         <div style={{ display: 'flex', flexDirection: 'row', paddingTop: 20 }}>
-          <img src={selectedImage} alt="Selected" style={mainImageStyle} />
-          <div>{selectedText}</div>
+          <img src={selectedMountain.image} alt="mounatin" style={mainImageStyle} />
+          <div style={{ marginLeft: '20px' }}>
+            {' '}
+            {/* Add some space between image and the details */}
+            <h3>{selectedMountain.name}</h3>
+            <p>
+              <strong>Elevation:</strong> {selectedMountain.elevation}
+            </p>
+            <p>
+              <strong>Description:</strong> {selectedMountain.shortDescription}
+            </p>
+            <p>
+              <strong>Trails:</strong>
+              <ul>
+                {selectedMountain.trails.map(trail => (
+                  <li key={trail}>{trail}</li>
+                ))}
+              </ul>
+            </p>
+            <p>
+              <strong>Time to Complete:</strong> {selectedMountain.timeToComplete}
+            </p>
+            <p>
+              <strong>What I Learned:</strong> {selectedMountain.somethingILearned}
+            </p>
+          </div>
         </div>
       )}
     </div>
