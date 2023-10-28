@@ -1,0 +1,5 @@
+static/videos/Intro[[:space:]]to[[:space:]]Analytics.mp4 filter=lfs diff=lfs merge=lfs -text
+static/videos/project[[:space:]]business[[:space:]]analysis.mp4 filter=lfs diff=lfs merge=lfs -text
+static/videos/project[[:space:]]finance.mp4 filter=lfs diff=lfs merge=lfs -text
+static/videos/strategy.mp4 filter=lfs diff=lfs merge=lfs -text
+static/videos/requirement[[:space:]]analysis.mp4 filter=lfs diff=lfs merge=lfs -text
