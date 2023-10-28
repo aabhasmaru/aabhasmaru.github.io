@@ -15,7 +15,7 @@ tech:
 
 company: 'Northeastern University'
 
-showInProjects: false
+showInProjects: true
 ---
 
 - AI implementation over organization and it's collaboration

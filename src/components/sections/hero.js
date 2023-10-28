@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import MyImage from '../../images/hero.png';
 // import Search from '../search';
 
 const StyledHeroSection = styled.section`
@@ -12,6 +13,8 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   height: 100vh;
   padding: 0;
+
+  
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
     height: auto;
@@ -31,9 +34,11 @@ const StyledHeroSection = styled.section`
   }
 
   h3 {
+  
     margin-top: 5px;
     color: var(--slate);
     line-height: 0.9;
+  }
   }
 
   p {
@@ -44,6 +49,11 @@ const StyledHeroSection = styled.section`
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
+  }
+  img.me-image {
+    width: 150px; // Adjust width as needed
+    height: auto;
+    margin-left: 120px; // Spacing between image and text
   }
 `;
 
@@ -61,8 +71,8 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Aabhas Maru.</h2>;
-  const three = <h3 className="medium-heading"> Aspiring Product/ Project Manager.</h3>;
+  const two = <h2 className="big-heading">Aabhas Maru</h2>;
+  // const three = <h3 className="medium-heading"> Aspiring Product/ Project Manager!</h3>;
   const four = (
     <>
       <p>
@@ -74,7 +84,7 @@ const Hero = () => {
     </>
   );
 
-  const items = [one, two, three, four];
+  const items = [one, two, four];
 
   return (
     <StyledHeroSection>
@@ -82,22 +92,24 @@ const Hero = () => {
         <h1>My Gatsby Site</h1>
         <Search />
       </header> */}
-      {prefersReducedMotion ? (
-        <>
-          {items.map((item, i) => (
-            <div key={i}>{item}</div>
-          ))}
-        </>
-      ) : (
-        <TransitionGroup component={null}>
-          {isMounted &&
-            items.map((item, i) => (
-              <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-                <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-              </CSSTransition>
+      <div>
+        {prefersReducedMotion ? (
+          <>
+            {items.map((item, i) => (
+              <div key={i}>{item}</div>
             ))}
-        </TransitionGroup>
-      )}
+          </>
+        ) : (
+          <TransitionGroup component={null}>
+            {isMounted &&
+              items.map((item, i) => (
+                <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+                  <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+                </CSSTransition>
+              ))}
+          </TransitionGroup>
+        )}
+      </div>
     </StyledHeroSection>
   );
 };

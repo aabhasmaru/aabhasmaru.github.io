@@ -1,7 +1,7 @@
 ---
 date: '2'
 title: 'Project Finance'
-video: 'pro.mp4'
+video: 'project finance.mp4'
 github: ''
 external: ''
 cta:

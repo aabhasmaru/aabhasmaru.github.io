@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'Requirement Analysis and Design'
-video: 'pro.mp4'
+video: 'requirement analysis.mp4'
 github: ''
 external: ''
 cta:
@@ -24,7 +24,7 @@ tech:
 
 - Prioritized the requirements using Volere Prioritization matrix.
 
-- Developed a working **prototype** using **Figma**.
+- Developed a working **prototype** using [Figma](https://www.figma.com/proto/yhEM8kPZoVLKDiBLSwb0KO/TravelNow-Prototype?type=design&node-id=92-137&t=xXvwRbgS0k6XvxSV-1&scaling=scale-down&page-id=20%3A165&starting-point-node-id=92%3A137&show-proto-sidebar=1&mode=design).
 
 - Used **Porter's 5 Forces Analysis** to analyze the competitive forces within an industry.
 

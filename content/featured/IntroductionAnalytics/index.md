@@ -1,7 +1,7 @@
 ---
 date: '3'
 title: 'Introduction to Analytics'
-video: 'pro.mp4'
+video: 'Intro to Analytics.mp4'
 external: ''
 cta:  
   - '/IntroToAnalysis/Introduction to Analytics.pdf'
