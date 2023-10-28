@@ -1,7 +1,7 @@
 ---
 date: '3'
 title: 'Project Business Analysis - New Product Proposition'
-video: 'project business analysis.mp4'
+video: 'Project Business Analysis.mp4'
 external: ''
 cta:
   - '/Project Business Analysis/HUSKY UNITED.pdf'
@@ -22,4 +22,4 @@ tech:
 - Researched and created plan on how to improve the student-alumni interaction on the portal, created file for **needs assessment** and presented product concept the professor
 - Created **transition and sustainment** using **SCRUM Methodology** for the developers, UX and UI team to work on and prepared a detailed document stating the requirements of the client
 - Prioritized the work for the team using **MoSCoW approach** and assigned the responsibilities using **RACI approach**
-- Constructed **KPI’s** and **tradeoffs** for the team**
+- Constructed **KPI’s** and **tradeoffs** for the team\*\*
