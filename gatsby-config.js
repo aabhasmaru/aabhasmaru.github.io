@@ -4,10 +4,10 @@ module.exports = {
   siteMetadata: {
     title: 'Aabhas Maru',
     description:
-      'Aabhas Maru is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
+      'Aabhas Maru is a Business Analysis enthusiast who specializes in Project Management with exceptional Finance & Accounting knowledge.',
     siteUrl: 'https://aabhasmaru.com', // No trailing slash allowed!
     image: '/am.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@bchiang7',
+    twitterUsername: '',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
