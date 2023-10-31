@@ -10,30 +10,29 @@ import { Menu } from '@components';
 import { IconLogo, IconHex } from '@components/icons';
 
 const StyledHeader = styled.header`
-/* Styles for the vertical header */
-display: flex;
-flex-direction: column; /* Arrange the children in a vertical column */
-align-items: center; /* Center the children horizontally */
-justify-content: flex-start; /* Start the children at the top */
-position: fixed;
-top: 0;
-left: 0;
-z-index: 12;
-width: var(--nav-width); /* Set the desired width of the header */
-height: 100vh;
-padding: 50px 0; /* Adjust the padding as needed */
-background-color: rgba(10, 25, 47, 0.85);
-backdrop-filter: blur(10px);
-transition: var(--transition);
+  /* Styles for the vertical header */
+  display: flex;
+  flex-direction: column; /* Arrange the children in a vertical column */
+  align-items: center; /* Center the children horizontally */
+  justify-content: flex-start; /* Start the children at the top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  width: var(--nav-width); /* Set the desired width of the header */
+  height: 10vh;
+  padding: 50px 0; /* Adjust the padding as needed */
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
 
-@media (max-width: 768px) {
-  display: none;
-}
-
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   @media (prefers-reduced-motion: no-preference) {
     ${props =>
-    props.scrollDirection === 'up' &&
+      props.scrollDirection === 'up' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -43,7 +42,7 @@ transition: var(--transition);
       `};
 
     ${props =>
-    props.scrollDirection === 'down' &&
+      props.scrollDirection === 'down' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -55,7 +54,7 @@ transition: var(--transition);
 
 const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
-  margin-left : 20px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -65,7 +64,7 @@ const StyledNav = styled.nav`
   left: 0;
   z-index: 12;
   width: var(--nav-width); /* Set the desired width of the navigation bar */
-  height: 100vh;
+  height: 10vh;
   padding: 20px 0; /* Adjust the padding as needed */
   background-color: rgba(10, 25, 47, 0.85);
   backdrop-filter: blur(10px);
@@ -123,44 +122,43 @@ const StyledNav = styled.nav`
 `;
 
 const StyledLinks = styled.div`
-/* Add spacing between the logo and links, and set the left margin */
-margin-top: 50px; /* Adjust as needed */
-margin-left: 20px; /* Add left margin */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
+  /* Add spacing between the logo and links, and set the left margin */
+  margin-top: 50px; /* Adjust as needed */
+  margin-left: 20px; /* Add left margin */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-ol {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
-  li {
-    
-    font-size: var(--fz-m);
-    counter-increment: item 1;
-    display: flex;
-    align-items: center;
+    li {
+      font-size: var(--fz-m);
+      counter-increment: item 1;
+      display: flex;
+      align-items: center;
 
-    a {
-      padding: 10px;
+      a {
+        padding: 10px;
 
-      &:before {
-        content: '0' counter(item) '.';
-        margin-right: 5px;
-        color: var(--green);
-        font-size: var(--fz-xs);
-        text-align: right;
+        &:before {
+          content: '0' counter(item) '.';
+          margin-right: 5px;
+          color: var(--green);
+          font-size: var(--fz-xs);
+          text-align: right;
+        }
       }
     }
   }
-}
 
-.resume-button {
-  ${({ theme }) => theme.mixins.smallButton};
-  margin-top: 15px; /* Add spacing between the links and the resume button */
-  font-size: var(--fz-xs);
-}
+  .resume-button {
+    ${({ theme }) => theme.mixins.smallButton};
+    margin-top: 15px; /* Add spacing between the links and the resume button */
+    font-size: var(--fz-xs);
+  }
 `;
 
 const Nav = ({ isHome }) => {
@@ -218,7 +216,6 @@ const Nav = ({ isHome }) => {
     </div>
   );
 
-
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
       <StyledNav>
@@ -263,7 +260,6 @@ const Nav = ({ isHome }) => {
                     ))}
                 </TransitionGroup>
               </ol>
-
             </StyledLinks>
 
             <TransitionGroup component={null}>
