@@ -6,7 +6,7 @@ module.exports = {
     description:
       'Aabhas Maru is a Business Analysis enthusiast who specializes in Project Management with exceptional Finance & Accounting knowledge.',
     siteUrl: 'https://aabhasmaru.com', // No trailing slash allowed!
-    image: '/am.png', // Path to your image you placed in the 'static' folder
+    image: '/front.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
   },
   plugins: [
