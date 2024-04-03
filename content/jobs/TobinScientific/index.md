@@ -1,7 +1,7 @@
 ---
 date: '2023-04-05'
 
-title: 'Project Management Co-op'
+title: 'Project Manager & Business Analyst - GMP Warehouse'
 
 company: 'Tobin Scientific'
 
@@ -11,15 +11,27 @@ range: 'September 2022 - April 2023'
 
 url: 'https://www.tobinscientific.com/'
 ---
+**Project Business Analyst**
 
-- Managed 3 biotech clients successfully, by conducting weekly conflict resolution meetings, resulted in 95% client satisfaction rate.
-- Spearheaded end-to-end project lifecycle management and ensured seamless implementation of mission- critical software solutions and oversaw multiple small to medium sized projects totaling to $800K+ in value.
-- Defined project scope; identified, managed &amp; controlled changes to scope and ensured alignment with project deliverables.
-- Facilitated cross-functional communication between finance, accounts, operations sales teams and clients, understanding their pain points, and ensuring seamless collaboration and alignment of objectives, resulting in improved operational efficiency
-- Gathered requirements and conducted market research to identify and implement inventory management &amp; NetSuite ERP software
-- Developed innovative inventory management strategies using Smartsheet, resulting in a 30% reduction in inventory errors
-- Implemented automated pallet counting process using Excel, resulting in 95% decrease in pallets counting time, and increased profits
-- Extracted data from software systems and analyzed in Power BI, distilling key insights and effectively communicating it to CEO
-- Crafted detailed use cases for inventory management software, aligning development with user needs and setting clear roadmaps
-- Estimated 21 CFR Part 11 app development budget, ensuring financial feasibility Automated daily operations with Microsoft Power automate, leading to precise client billing.
-- Mentored, trained, interviewed and hired team members for various projects at multiple warehouses.
+- Managed 3 end-to-end project lifecycles, using MS Project, JIRA, and MS Excel and delivered projects worth $800K+ in value.
+- Spearheaded 32+ cross-functional meetings with stakeholders and clients to elicit requirements, draw current state and future state. 
+- Identified and implemented 21 CFR part 11 compliant WMS software based on business requirements  across 3 GMP warehouses.
+- Conducted 15+ training sessions for seamless adoption of softwares and new processes using ADKAR change management model.
+
+**Continuous Process Improvement**
+- Documented process workflow and data flow using swimlane and ER diagram, to illustrate business processes to CSO.
+- Crafted detailed SOPs for warehouse operations and deployed  SMART goals, leading to 99.9% data accuracy and 2x faster order processing and eliminated operational bottlenecks through data-driven root-cause analysis  within 7 months.
+- Developed and monitored KPIs in Limble, leading 25% enhancement in on-time delivery, order accuracy, & inventory management. 
+- Automated BOL, pallet counting and labor hours recording using MS power automate and logistics software saving 25+ hours.
+
+**Data Analyst**
+
+- Leveraged SQL to make 20+ reports by extracting data from central data warehouse to identify discrepancies in inventory data, and created risk mitigation strategies that improved data integrity by 30%.
+- Developed dashboards in Power BI to analyze warehouse operations for continuous improvements & created reports to explain data to CEO, achieving $42K reduction in warehouse costs and 35% better demand forecasting.
+
+**Product Manager: Built Logistics Software (Agile Software Development Life Cycle)**
+- Authored PUC, BRD and documented functional/ non-functional requirements, boosting project success and satisfaction by 60%.
+- Implemented Agile framework, created product roadmap and leveraged JIRA Scrum Board to produce 80+ user stories, and managed product backlog, and tracked project progress, increasing team productivity and project delivery efficiency by 20%.
+- Collaborated with UI/UX teams to enhance interfaces, boosting customer satisfaction by 80%; defined test cases with QA for 99% functional spec compliance, and led UAT for 95% acceptance, ensuring software met all business and user expectations.
+
+
