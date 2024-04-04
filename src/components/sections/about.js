@@ -224,7 +224,7 @@ const About = () => {
               University. Prior to that, I studied Business Management at the Narsee Monjee
               Institute of Management Studies and Finance & Accounting at the Prestige Institute of
               Management & Research. My professional journey includes successful roles as a Project
-              Management Co-op at Tobin Scientific, where I have successfully implemented Inventory
+              Manager and Business Analyst Co-op at Tobin Scientific, where I have successfully implemented Inventory
               Management and ERP software and as a Financial Analyst at Arihant Steels, where
               I managed financial data, tax returns, and financial statements. I'm dedicated to
               data-driven decision-making, innovation, and excellence, and I'm eager to apply my
