@@ -197,10 +197,10 @@ const About = () => {
   }, []);
 
   const skills = [
-    'Business Analysis',
-    'Data Analysis',
     'Project Management',
     'Product Management',
+    'Business Analysis',
+    'Data Analysis',
     'SDLC',
     'Agile Methodology',
     'Scrum Master',
@@ -219,16 +219,7 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              I'm Aabhas Maru, a Business Analysis enthusiast based in Boston, MA. I earned a
-              Master's in Project Management with a focus on Business Analysis from Northeastern
-              University. Prior to that, I studied Business Management at the Narsee Monjee
-              Institute of Management Studies and Finance & Accounting at the Prestige Institute of
-              Management & Research. My professional journey includes successful roles as a Project
-              Manager and Business Analyst Co-op at Tobin Scientific, where I have successfully implemented Inventory
-              Management and ERP software and as a Financial Analyst at Arihant Steels, where
-              I managed financial data, tax returns, and financial statements. I'm dedicated to
-              data-driven decision-making, innovation, and excellence, and I'm eager to apply my
-              skills and experience to new challenges in project management and business analysis.
+              Results-driven Product and Project Manager with 5+ years of experience in SaaS, cloud computing, and data storage solutions. Skilled in product lifecycle management, Agile methodologies, and SDLC, with expertise in planning, scheduling, budgeting, and risk analysis. Proficient in Jira, Confluence, MS Project, Power BI, and Tableau. Experienced in leading cross-functional teams and managing stakeholders to deliver complex projects aligned with PMO standards.
             </p>
 
             {/* <p>
