@@ -51,6 +51,15 @@ module.exports = {
     //   },
     // },
     {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: ["G-CE866ZHGL9"],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Aabhas Maru',
